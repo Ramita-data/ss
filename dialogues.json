@@ -1,0 +1,20 @@
+{
+  "heroes": {
+    "hero1": { "name": "Akira", "dialogues": ["Let's start our adventure!", "Enemies ahead, stay alert!", "Victory is ours!"] },
+    "hero2": { "name": "Sakura", "dialogues": ["I will protect everyone!", "This looks dangerous...", "We did it!"] },
+    "hero3": { "name": "Ryu", "premium": true, "dialogues": ["Time to show my power!", "No one can stop me!", "Let's go!"] },
+    "hero4": { "name": "Hikari", "premium": true, "dialogues": ["Flying high!", "Watch out below!", "We’re unstoppable!"] }
+  },
+  "monsters": {
+    "monster1": { "name": "Goblin", "dialogues": ["Grrr!", "Attack!"] },
+    "monster2": { "name": "Slime", "dialogues": ["Blop!", "Splooosh!"] },
+    "monster3": { "name": "Dragon", "flying": true, "dialogues": ["Roar!", "Feel my flames!"] },
+    "monster4": { "name": "Ogre", "dialogues": ["Ugh!", "Smash!"] }
+  },
+  "worlds": {
+    "forest": { "premium": false },
+    "village": { "premium": false },
+    "castle": { "premium": true },
+    "mystic": { "premium": true }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anime RPG Adventure</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+<script src="https://www.paypal.com/sdk/js?client-id=AWN094Iq1_otcV6ViOemcrZXO1rTfjOgjbng3r3EOOXZwkhTGlJNX-Pd1aLVaws_wbSpSlanDei1pXTP&currency=USD"></script>
+</head>
+<body>
+<h1>🌸 Anime RPG Adventure 🌸</h1>
+<p>Start your journey with <strong>Akira</strong> and <strong>Sakura</strong> for free!</p>
+<button onclick="window.location='game.html'">🎮 Play Game</button>
+<button onclick="alert('Use arrow keys or tap left/right on mobile to move. Fight monsters to level up!')">❓ How to Play</button>
+
+<h2>Unlock Premium Content ($2 each)</h2>
+<p>Hero Ryu <div id="paypal-hero3"></div></p>
+<p>Hero Hikari <div id="paypal-hero4"></div></p>
+<p>Castle World <div id="paypal-castle"></div></p>
+<p>Mystic Realm <div id="paypal-mystic"></div></p>
+
+<script>
+function setupPayPal(id,key){
+  paypal.Buttons({
+    createOrder: (data,actions)=>actions.order.create({purchase_units:[{amount:{value:'2.00'}}]}),
+    onApprove: (data,actions)=>actions.order.capture().then(details=>{
+      alert(key+' unlocked for '+details.payer.name.given_name+'!');
+      localStorage.setItem(key,'unlocked');
+    })
+  }).render(id);
+}
+setupPayPal('#paypal-hero3','hero3');
+setupPayPal('#paypal-hero4','hero4');
+setupPayPal('#paypal-castle','castle');
+setupPayPal('#paypal-mystic','mystic');
+</script>
+</body>
+</html>
